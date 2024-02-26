@@ -1,0 +1,142 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// COLORS
+// primary
+$c-Red: hsl(0, 78%, 62%);
+$c-Cyan: hsl(180, 62%, 55%);
+$c-Orange: hsl(34, 97%, 64%);
+$c-Blue: hsl(212, 86%, 64%);
+
+// neutral
+
+$c-Very-Dark-Blue: hsl(234, 12%, 34%);
+$c-Grayish-Blue: hsl(229, 6%, 66%);
+$c-Very-Light-Gray: hsl(0, 0%, 98%);
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Poppins;
+}
+
+h1 {
+	font-weight: 200;
+	color: $c-Grayish-Blue;
+	span {
+		color: $c-Very-Dark-Blue;
+		font-weight: 600;
+	}	
+}
+
+h2 {
+	font-weight: 500;
+	color: $c-Very-Dark-Blue;
+}
+
+p {
+	color: $c-Grayish-Blue;
+}
+
+body {
+	font-size: 15px;
+	background-color: $c-Very-Light-Gray;
+}
+
+header {
+	text-align: center;
+	padding: 40px 40px 10px 40px;
+
+	h1 {
+		font-size: 1.2rem;
+
+	}
+
+	p {
+		padding-top: 15px;
+		text-align: center;
+	}
+}
+
+body {
+	div {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		margin: 40px 20px;
+		box-shadow: 0 10px 20px $c-Grayish-Blue;
+		padding: 25px;
+		max-width: 340px;
+		
+		p {
+			padding-top: 10px;
+		}
+
+		img {
+			padding: 50px 10px 10px 0;
+			margin-left: auto;
+		}
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			list-style: none;
+		}
+	}
+
+	.supervisor {
+		border-top: 4px solid $c-Cyan;
+		border-radius: 5px;
+	}
+
+	.team-builder {
+		border-top: 4px solid $c-Red;
+		border-radius: 5px;
+	}
+
+	.karma {
+		border-top: 4px solid $c-Orange;
+		border-radius: 5px;
+	}
+
+	.calculator {
+		border-top: 4px solid $c-Blue;
+		border-radius: 5px;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+
+	body {
+		display: grid;
+		flex-direction: column;
+		height: 100vh;
+
+		header {
+			h1 {
+				font-size: 40px;
+			}
+			p {
+				
+				padding: 20px 30% 0 30%;
+			}
+		}
+
+		main {
+			ul {
+				flex-direction: row;
+			}
+
+		}
+
+		footer {
+			align-self: end;
+		}
+	}
+
+}
